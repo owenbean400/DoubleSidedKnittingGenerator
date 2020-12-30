@@ -1,0 +1,135 @@
+.toolbar-container
+    width: 150px
+    height: calc( 100% - 32px )
+    background-color: #444444
+    overflow-x: hidden
+    overflow-y: auto
+    position: fixed
+    top: 32px
+    z-index: 2
+
+    .tools-container
+        padding: 0
+        list-style-type: none
+        margin: 0
+
+        .tools
+            color: white
+            padding: 18px 0 18px 12px
+            border-bottom: black solid 1px
+            &:hover
+                background-color: #212121
+
+.color-chooser
+    z-index: 2
+    position: fixed
+    top: 32px
+    left: 150px
+    background-color: #444444
+    border-left: solid black 1px
+    display: flex
+    flex-wrap: wrap
+
+    .color-choices
+        font-size: 18px
+        color: white
+        padding: 12px 24px
+        &:hover
+            background-color: #333
+        &:active
+
+        .color-circle
+            width: 24px
+            height: 24px
+            border-radius: 100%
+            background-color: black
+            margin: 0 auto
+
+        p
+            margin: 0 0 8px 0
+
+.color-picker
+    position: fixed
+    top: 112px
+    left: 150px
+    z-index: 2
+
+.zoom-picker
+    position: fixed
+    top: 148px
+    left: 150px
+    width: 200px
+    z-index: 2
+    background-color: #444
+    border-left: solid black 1px
+    color: white
+
+    .zoom-amount
+        font-size: 18px
+        text-align: center
+        margin: 18px 0 0 0
+
+    .zoom-change-container
+        display: grid
+        grid-template-columns: auto auto
+        justify-content: space-around
+
+        .zoom-change
+            width: 48px
+            height: 48px
+            background-color: #333
+            border-radius: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            &:hover
+                background-color: #212121
+
+.size-picker
+    position: fixed
+    top: 90px
+    left: 150px
+    width: 200px
+    z-index: 2
+    background-color: #444
+    border-left: solid black 1px
+    color: white
+    display: grid
+    grid-template-rows: auto auto
+    grid-template-columns: 200px
+    align-items: center
+    justify-content: space-around
+
+    .size-selector
+        .size-selector-text
+            text-align: center
+            margin: 12px 0 0 0
+
+        .size-changer
+            display: grid
+            grid-template-columns: auto auto auto
+            justify-content: space-evenly
+            align-items: center
+            margin-bottom: 16px
+
+            .size-changer-button
+                width: 48px
+                height: 48px
+                background-color: #333
+                border-radius: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                border: none
+                color: white
+                &:hover
+                    background-color: #212121
+
+            .size-changer-input
+                width: 48px
+
+@media print
+    .no-print
+        display: none
