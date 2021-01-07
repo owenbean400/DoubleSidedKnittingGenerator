@@ -1,9 +1,7 @@
 import React from 'react';
 import './navbar.sass';
-//import { jsPDF } from 'jspdf';
+import DownloadNav from './sublinks/downloadUI';
 import { connect } from 'react-redux';
-import createKnitImg from './printFunctions/knitChartBlackAndWhite';
-import download from 'downloadjs';
 
 class Navbar extends React.Component {
 
@@ -12,7 +10,7 @@ class Navbar extends React.Component {
             <div className="no-print">
                 <nav className="nav-container">
                     <ul className="link-container">
-                        <li className="links" onClick={() => download(createKnitImg(this.props.info))}>Print</li>
+                        <DownloadNav/>
                     </ul>
                     <h1>Owen Bean Double Sided Knitting Pattern Generator</h1>
                 </nav>

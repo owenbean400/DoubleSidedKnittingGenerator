@@ -3,7 +3,7 @@ export default function createKnitImg(knitInfo) {
     const CANVAS_WIDTH = 612;
     const CANVAS_HEIGHT = 792;
     const SQUARE_SIZE = 12;
-    const WHITESPACE_MARGIN_TOP = 60;
+    const WHITESPACE_MARGIN_TOP = 30;
     const GRID_PADDING_TOP = 20;
     const GRID_PADDING_LEFT = 32;
     const SPACE_BETWEEN_GRID = 1;
@@ -35,7 +35,7 @@ export default function createKnitImg(knitInfo) {
     ctx.font = HEADER_TEXT;
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
-    ctx.fillText("Owen Bean Knit Pattern Generator", CANVAS_WIDTH/2, WHITESPACE_MARGIN_TOP/2);
+    ctx.fillText("Owen Bean Knit Pattern Generator", CANVAS_WIDTH/2, WHITESPACE_MARGIN_TOP/1.25);
 
     ctx.font = TEXT_SIZE;
 

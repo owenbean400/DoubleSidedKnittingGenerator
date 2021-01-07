@@ -128,6 +128,18 @@ const rootReducer = (state = initState, action) => {
             }
         }
     }
+    else if(action.type === "RANDOM_GRID"){
+        let newGrid = action.grid;
+        return {
+            info: {
+                grid: {
+                    row: newGrid,
+                },
+                size: state.info.size,
+                color: state.info.color
+            }
+        }
+    }
     return state;
 }
 

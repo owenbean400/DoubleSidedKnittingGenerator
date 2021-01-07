@@ -2,7 +2,8 @@ import './toolbar.sass'
 import React, { useState } from 'react'
 import ColorPicker from './colorPicker'
 import ZoomPicker from './zoomPicker'
-import SizePicker from './sizePicker';
+import SizePicker from './sizePicker'
+import RandomizePicker from './randomize'
 
 export default function Toolbar(){
     const [tool, setTool] = useState("none");
@@ -15,6 +16,8 @@ export default function Toolbar(){
                 return <ZoomPicker />;
             case "size":
                 return <SizePicker />;
+            case "random":
+                return <RandomizePicker />;
             default:
                 return null;
         }
@@ -32,6 +35,9 @@ export default function Toolbar(){
                     </li>
                     <li className="tools" onClick={() => setTool("zoom")}>
                         Zoom
+                    </li>
+                    <li className="tools" onClick={() => setTool("random")}>
+                        Random
                     </li>
                 </ol>
             </div>

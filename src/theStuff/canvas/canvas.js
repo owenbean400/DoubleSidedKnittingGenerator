@@ -14,12 +14,12 @@ class Canvas extends React.Component{
         else{
             gridLength = 0;
         }
-        console.log(gridLength);
         var STYLE = {
             box: {
                 margin: '1px',
                 width: this.props.size * 12 + "px",
                 height: this.props.size * 9 + "px",
+                transition: 'width 0.2s, height 0.2s',
             },
             row: {
                 display: 'flex',
@@ -28,9 +28,11 @@ class Canvas extends React.Component{
                 padding: '32px',
                 display: 'block',
                 width: (this.props.size * (12) * gridLength) + "px",
+                transition: 'width 0.2s, height 0.2s',
             },
             view: {
                 width: (this.props.size * (12) * gridLength) + 64 + "px",
+                transition: 'width 0.02s, height 0.2s',
             }
         }
 

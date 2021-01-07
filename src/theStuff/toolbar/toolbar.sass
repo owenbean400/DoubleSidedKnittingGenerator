@@ -124,11 +124,34 @@
                 cursor: pointer
                 border: none
                 color: white
+                outline: none
                 &:hover
                     background-color: #212121
 
             .size-changer-input
                 width: 48px
+
+.random-picker
+    position: fixed
+    top: 205px
+    left: 150px
+    width: 160px
+    z-index: 2
+    background-color: #444
+    border-left: solid black 1px
+    color: white
+
+    button
+        background-color: #333
+        color: white
+        border-radius: 80%
+        padding: 16px
+        border: none
+        margin: 24px auto
+        display: block
+        outline: none
+        &:hover
+            background-color: #212121
 
 @media print
     .no-print
