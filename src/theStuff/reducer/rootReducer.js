@@ -90,7 +90,6 @@ const rootReducer = (state = initState, action) => {
         }
         else if(action.gridInfo.search("column") !== -1){
             if(action.gridInfo.search(/[0-9]/g) !== -1){
-                console.log("numer column")
                 let previousAmountRow = Object.values(newGrid).length;
                 let numberAmountChange = action.gridInfo.substring(action.gridInfo.search(/[0-9]/g), action.gridInfo.length);
                 newGrid = {
@@ -104,12 +103,9 @@ const rootReducer = (state = initState, action) => {
                 }
             }
             else if(action.gridInfo.search(/[+]/g) !== -1){
-                console.log(newGrid);
-                console.log("add column")
                 for(let i = 0; i < Object.values(newGrid).length; i++){
                     newGrid[i].push(0);
                 }
-                console.log(newGrid[Object.values(newGrid)[0]]);
             }
             else if(action.gridInfo.search(/[-]/g) !== -1){
                 for(let i = 0; i < Object.values(newGrid).length; i++){
@@ -117,7 +113,6 @@ const rootReducer = (state = initState, action) => {
                 }
             }
         }
-        console.log(newGrid);
         return{
             info: {
                 grid: {
@@ -129,7 +124,13 @@ const rootReducer = (state = initState, action) => {
         }
     }
     else if(action.type === "RANDOM_GRID"){
-        let newGrid = action.grid;
+        let newGrid = {};
+        for(let row = 0; row < Object.values(state.info.grid.row).length; row++){
+            newGrid[row] = [];
+            for(let column = 0; column < Object.values(state.info.grid.row)[0].length; column++){
+                newGrid[row].push(Math.floor(Math.random() * 2));
+            }
+        }
         return {
             info: {
                 grid: {
