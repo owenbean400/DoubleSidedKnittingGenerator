@@ -1,6 +1,6 @@
 # Custom Double Sided Knit Pixel Art Creator
 
-In Development
+In Development - Not Mobile Friendly Yet
 
 ## About
 
@@ -30,3 +30,11 @@ Once the design is finished, there are several different downloadable files
 | Control + Arrow Down  | increase square rows count by one    |
 | Control + Arrow Right | increase square columns count by one |
 | Control + Arrow Left  | decrease square columns count by one |
+
+### Things that being worked on
+
+- [] Bundle files in a zip file
+- [] Add Speed Drawing, adds more than just clicking each square
+- [] Add Realistic Photograph of Knit Design
+- [] Make Mobile Friendly
+- [] Add more GUI customization
