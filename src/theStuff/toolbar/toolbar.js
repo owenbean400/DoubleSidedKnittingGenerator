@@ -20,7 +20,6 @@ export default function Toolbar(){
     }
 
     function renderTool(tool) {
-        console.log("clicked tool");
         switch(tool){
             case "color":
                 return <ColorPicker

@@ -64,7 +64,6 @@ class Canvas extends React.Component{
                     </div>
                 </ScrollArea>
                 <div className="canvas-background" style={{backgroundColor: this.props.canvasBackground}}>
-
                 </div>
             </div>
         );
