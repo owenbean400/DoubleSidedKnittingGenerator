@@ -52,7 +52,7 @@ class Canvas extends React.Component{
             )
         }
         return(
-            <div className="canvas">
+            <div>
                 <ScrollArea
                     className="canvas-container" 
                     style={{backgroundColor: this.props.canvasBackground}}
@@ -63,6 +63,9 @@ class Canvas extends React.Component{
                         {gridDisplay}
                     </div>
                 </ScrollArea>
+                <div className="canvas-background" style={{backgroundColor: this.props.canvasBackground}}>
+
+                </div>
             </div>
         );
     }
