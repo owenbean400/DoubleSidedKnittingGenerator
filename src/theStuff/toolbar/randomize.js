@@ -9,8 +9,8 @@ class RandomizePicker extends React.Component{
 
     render(){
         return(
-            <div className="random-picker">
-                <button onClick={() => this.randomize()}>Randomize</button>
+            <div className="random-picker" style={{backgroundColor: this.props.colorCss[0], borderColor: this.props.colorCss[1]}}>
+                <button onClick={() => this.randomize()} style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>Randomize</button>
             </div>
         )
     }

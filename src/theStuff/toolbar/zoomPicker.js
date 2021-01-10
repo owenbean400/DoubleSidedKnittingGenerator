@@ -5,11 +5,11 @@ class ZoomPicker extends React.Component{
 
     render(){
         return(
-            <div className="zoom-picker">
-                <p className="zoom-amount">{this.props.size * 25 + '%'}</p>
+            <div className="zoom-picker" style={{backgroundColor: this.props.colorCss[0], borderColor: this.props.colorCss[1]}}>
+                <p className="zoom-amount" style={{color: this.props.colorCss[2]}}>{this.props.size * 25 + '%'}</p>
                 <div className="zoom-change-container">
-                    <p className="zoom-change" onClick={() => this.props.changeSize('+')}>+</p>
-                    <p className="zoom-change" onClick={() => this.props.changeSize('-')}>-</p>
+                    <p className="zoom-change" onClick={() => this.props.changeSize('+')} style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>+</p>
+                    <p className="zoom-change" onClick={() => this.props.changeSize('-')} style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>-</p>
                 </div>
             </div>
         );

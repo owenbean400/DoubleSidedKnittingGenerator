@@ -80,21 +80,21 @@ class SizePicker extends React.Component{
 
     render(){
         return(
-            <div className="size-picker">
+            <div className="size-picker" style={{backgroundColor: this.props.colorCss[0], borderColor: this.props.colorCss[1]}}>
                 <div className="size-selector">
-                    <p className="size-selector-text">Row</p>
+                    <p className="size-selector-text" style={{color: this.props.colorCss[2]}}>Row</p>
                     <form className="size-changer" onSubmit={this.onSubmit}>
-                        <button onClick={() => this.updateGrid("+row")} className="size-changer-button">+</button>
+                        <button onClick={() => this.updateGrid("+row")} className="size-changer-button" style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>+</button>
                         <input type="number" value={this.state.row} name="row" onChange={this.onChange} className="size-changer-input"></input>
-                        <button onClick={() => this.updateGrid("-row")} className="size-changer-button">-</button>
+                        <button onClick={() => this.updateGrid("-row")} className="size-changer-button" style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>-</button>
                     </form>
                 </div>
                 <div className="size-selector">
-                    <p className="size-selector-text">Column</p>
+                    <p className="size-selector-text" style={{color: this.props.colorCss[2]}}>Column</p>
                     <form className="size-changer" onSubmit={this.onSubmit}>
-                        <button onClick={() => this.updateGrid("+column")} className="size-changer-button">+</button>
+                        <button onClick={() => this.updateGrid("+column")} className="size-changer-button" style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>+</button>
                         <input type="number" value={this.state.column} name="column" onChange={this.onChange} className="size-changer-input"></input>
-                        <button onClick={() => this.updateGrid("-column")} className="size-changer-button">-</button>
+                        <button onClick={() => this.updateGrid("-column")} className="size-changer-button" style={{backgroundColor: this.props.colorCss[1], color: this.props.colorCss[2]}}>-</button>
                     </form>
                 </div>
             </div>

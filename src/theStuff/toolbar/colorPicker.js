@@ -23,20 +23,21 @@ class ColorPicker extends React.Component{
     render(){
         return(
             <div onMouseLeave={() => this.changeChoice(0)}>
-                <div className="color-chooser">
-                    <div className="color-choices" onClick={() => this.changeChoice(1)} style={{backgroundColor: (this.state.choice === 1) ? '#333': '#444'}}>
-                        <p>Color 1</p>
-                        <div className="color-circle" style={{backgroundColor: this.props.info.color[0]}}></div>
+                <div className="color-chooser" style={{borderColor: this.props.colorCss[1]}}>
+                    <div className="color-choices" onClick={() => this.changeChoice(1)} style={{backgroundColor: (this.state.choice === 1) ? this.props.colorCss[1]: this.props.colorCss[0]}}>
+                        <p style={{color: this.props.colorCss[2]}}>Color 1</p>
+                        <div className="color-circle" style={{backgroundColor: this.props.info.color[0], border: '1px solid ' + this.props.colorCss[2]}}></div>
                     </div>
-                    <div className="color-choices" onClick={() => this.changeChoice(2)} style={{backgroundColor: (this.state.choice === 2) ? '#333': '#444'}}>
-                        <p>Color 2</p>
-                        <div className="color-circle" style={{backgroundColor: this.props.info.color[1]}}></div>
+                    <div className="color-choices" onClick={() => this.changeChoice(2)} style={{backgroundColor: (this.state.choice === 2) ? this.props.colorCss[1]: this.props.colorCss[0]}}>
+                        <p style={{color: this.props.colorCss[2]}}>Color 2</p>
+                        <div className="color-circle" style={{backgroundColor: this.props.info.color[1], border: '1px solid ' + this.props.colorCss[2]}}></div>
                     </div>
                 </div>
                 {(this.state.choice > 0) ? 
                 <div className="color-picker">
                     <CompactPicker 
                         onChangeComplete={this.handleChangeComplete}
+                        style={{backgroundColor: this.props.colorCss[1]}}
                     />
                 </div>    
                 : null}

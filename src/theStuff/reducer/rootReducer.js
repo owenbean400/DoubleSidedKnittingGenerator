@@ -13,6 +13,30 @@ const initState = {
                 6: [0,0,0,0,0,0],
             }
         }
+    },
+    customize: {
+        shortcutKeys: {
+            zoom: {
+                key: "Alt",
+                keyIn: "ArrowUp",
+                keyOut: "ArrowDown",
+            },
+            size: {
+                key: "Control",
+                rowPlus: "ArrowDown",
+                rowMinus: "ArrowUp",
+                columnPlus: "ArrowRight",
+                columnMinus: "ArrowLeft",
+            },
+            random: {
+                key: "r",
+            },
+            switchDarkmode: {
+                key: "d",
+            }
+        },
+        canvasColor: "#eee",
+        darkMode: false,
     }
 }
 
@@ -24,7 +48,8 @@ const rootReducer = (state = initState, action) => {
                 grid: state.info.grid,
                 size: state.info.size,
                 color: newColor
-            }
+            },
+            customize: state.customize
         }
     }
     else if(action.type === "CHANGE_SIZE") {
@@ -43,7 +68,8 @@ const rootReducer = (state = initState, action) => {
                 grid: state.info.grid,
                 size: newSize,
                 color: state.info.color
-            }
+            },
+            customize: state.customize
         }
     }
     else if(action.type === "CHANGE_COLOR_SQUARE"){
@@ -57,7 +83,8 @@ const rootReducer = (state = initState, action) => {
                 },
                 size: state.info.size,
                 color: state.info.color
-            }
+            },
+            customize: state.customize
         }
     }
     else if(action.type === "CHANGE_GRID"){
@@ -120,7 +147,8 @@ const rootReducer = (state = initState, action) => {
                 },
                 size: state.info.size,
                 color: state.info.color
-            }
+            },
+            customize: state.customize
         }
     }
     else if(action.type === "RANDOM_GRID"){
@@ -138,6 +166,17 @@ const rootReducer = (state = initState, action) => {
                 },
                 size: state.info.size,
                 color: state.info.color
+            },
+            customize: state.customize
+        }
+    }
+    else if(action.type === "SWITCH_DARKMODE"){
+        return{
+            info: state.info,
+            customize: {
+                shortcutKeys: state.customize.shortcutKeys,
+                canvasColor: (state.customize.darkMode) ? "#eee" : "#999",
+                darkMode: !state.customize.darkMode,
             }
         }
     }

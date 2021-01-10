@@ -54,7 +54,8 @@ class Canvas extends React.Component{
         return(
             <div className="canvas">
                 <ScrollArea
-                    className="canvas-container"
+                    className="canvas-container" 
+                    style={{backgroundColor: this.props.canvasBackground}}
                     smoothScrolling={true}
                     contentStyle={STYLE.view}
                 >
@@ -71,7 +72,8 @@ const mapStateToProps = (state) => {
     return{
         color: state.info.color,
         size: state.info.size,
-        grid: state.info.grid
+        grid: state.info.grid,
+        canvasBackground: state.customize.canvasColor
     }
 }
 

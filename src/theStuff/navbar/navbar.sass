@@ -5,10 +5,10 @@ $nav-height: 32px
     height: $nav-height
     position: fixed
     z-index: 200
-    background-color: #232323
     display: flex
     justify-content: space-between
     align-items: center
+    border-bottom: solid 1px
 
     .link-container
         display: flex
@@ -19,7 +19,7 @@ $nav-height: 32px
         list-style-type: none
 
         .links
-            border-right: 1px black solid
+            border-right: 1px solid
             list-style-type: none
             height: $nav-height
             padding: 0 $nav-height/2
@@ -27,29 +27,20 @@ $nav-height: 32px
             display: flex
             align-items: center
             cursor: pointer
-            &:hover
-                background-color: black
 
         .sub-link-container
             position: fixed
             top: $nav-height
-            background-color: gray
             padding: 0
             list-style-type: none
-            -webkit-box-shadow: 0px 5px 18px -5px #000000
-            box-shadow: 0px 5px 18px -5px #000000
 
             .sub-link
                 padding: 8px 6px
-                background-color: #323232
                 color: white
                 cursor: pointer
-                border-top: black 1px solid
-                &:hover
-                    background-color: black
+                border-top: 1px solid
 
     h1
         font-size: 12px
-        color: white
         margin: 0 8px 0 0
         font-weight: 400
