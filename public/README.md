@@ -21,15 +21,16 @@ Once the design is finished, there are several different downloadable files
 
 ## Keyboard Shortcuts
 
-| Key                   | Action                               |
-| --------------------- | ------------------------------------ |
-| r                     | randomize square colors              |
-| Alt + Arrow Up        | zoom in                              |
-| Alt + Arrow Down      | zoom out                             |
-| Control + Arrow Up    | decrease square rows count by one    |
-| Control + Arrow Down  | increase square rows count by one    |
-| Control + Arrow Right | increase square columns count by one |
-| Control + Arrow Left  | decrease square columns count by one |
+| Key                   | Action                                |
+| --------------------- | ------------------------------------- |
+| r                     | randomize square colors               |
+| Alt + Arrow Up        | zoom in                               |
+| Alt + Arrow Down      | zoom out                              |
+| Control + Arrow Up    | decrease square rows count by one     |
+| Control + Arrow Down  | increase square rows count by one     |
+| Control + Arrow Right | increase square columns count by one  |
+| Control + Arrow Left  | decrease square columns count by one  |
+| d                     | switch between darkmode and lightmode |
 
 ### Things that being worked on
 
