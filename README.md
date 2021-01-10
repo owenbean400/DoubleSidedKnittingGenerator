@@ -39,4 +39,3 @@ Once the design is finished, there are several different downloadable files
 - [] Add Realistic Photograph of Knit Design
 - [] Make Mobile Friendly
 - [] Add more GUI customization
-
