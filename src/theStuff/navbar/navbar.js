@@ -20,6 +20,7 @@ class Navbar extends React.Component {
                         <DownloadNav
                             colorCss={colorCss}
                         />
+                        <li>Settings</li>
                     </ul>
                     <h1 style={{color: colorCss[3]}}>Owen Bean Double Sided Knitting Pattern Generator</h1>
                 </nav>

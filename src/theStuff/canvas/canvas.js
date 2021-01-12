@@ -4,7 +4,6 @@ import ScrollArea from 'react-scrollbar';
 import './canvas.sass';
 
 class Canvas extends React.Component{
-
     render(){
         const GRID = this.props.grid.row;
         let gridLength;
