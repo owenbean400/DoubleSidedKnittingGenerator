@@ -36,6 +36,8 @@ export default function KeyStroke(){
                 case keyBoardShortcuts.size.columnMinus:
                     dispatch({type: "CHANGE_GRID", gridInfo: "column-"});
                     break;
+                default:
+                    break;
             }
         }
         if(event.key === keyBoardShortcuts.random.key)

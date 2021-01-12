@@ -8,7 +8,7 @@ export default function pdfCreatorKnit(json){
 }
 
 function wrapStringTemplate(stringInfo, colorArray){
-    let keyLegend = "\nK1 = knit one\nP1 = perl one\nC1 = color in rgb of " + colorArray[0] + "\nC2 = color in rgb of " + colorArray[1] + "\nK2-tog = knit two strings together as one" + "\n\n";
+    let keyLegend = "\nK1 = knit one\nP1 = perl one\nC1 = color in rgb of " + colorArray[0] + "\nC2 = color in rgb of " + colorArray[1] + "\nK2-tog = knit two strings together as one\n\n";
     stringInfo = "Owen Bean Knit Instruction Generator \n" + keyLegend + stringInfo;
     return stringInfo;
 }

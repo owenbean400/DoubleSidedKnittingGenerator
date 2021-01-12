@@ -13,11 +13,6 @@ export default function DownloadNav(props){
         grid: state.grid.row,
         color: state.color
     }
-    const subLinkStyle = {
-        backgroundColor: props.colorCss[2],
-        color: props.colorCss[3],
-        borderColor: props.colorCss[1]
-    }
     const subLinks = {
         Download_Knit_Chart: () => download(createKnitImg(info)),
         Download_Knit_Preview: () => download(knitChartPreview(info)),
