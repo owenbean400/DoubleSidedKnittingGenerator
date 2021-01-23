@@ -21,6 +21,8 @@ Once the design is finished, there are several different downloadable files
 
 ## Keyboard Shortcuts
 
+Can be customized in the settings on the top of nav bar
+
 | Key                   | Action                                |
 | --------------------- | ------------------------------------- |
 | r                     | randomize square colors               |
@@ -34,9 +36,15 @@ Once the design is finished, there are several different downloadable files
 
 ### Things that being worked on
 
-- [] Change Background Color
+- [x] Change Background Color
 - [] Bundle files in a zip file
 - [] Add Speed Drawing, adds more than just clicking each square
 - [] Add Realistic Photograph of Knit Design
 - [] Make Mobile Friendly
-- [] Add more GUI customization
+- [x] Add more GUI customization
+
+### Update Notes
+
+- Added setting screen
+- Added customizable short cut keys in settings
+- Added customizable canvas color in settings

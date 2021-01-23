@@ -5,6 +5,7 @@ import knitChartPreview from '../../downloads/printFunctions/knitChartPreview';
 import pdfCreatorKnit from '../../downloads/printFunctions/knitInstructionPDF';
 import download from 'downloadjs';
 import Sublink from './sublink';
+import NavLink from './link';
 
 export default function DownloadNav(props){
     const [hover, setHover] = useState(false);
@@ -22,9 +23,11 @@ export default function DownloadNav(props){
 
     return(
         <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-            <div className="links" style={{backgroundColor: (hover) ? props.colorCss[2] : props.colorCss[0], color: props.colorCss[3], borderColor: props.colorCss[1]}}>
-                Downloads
-            </div>
+            <NavLink
+                name="Downloads"
+                colorCss={props.colorCss}
+                hovering={hover}
+            />
             <ol style={{display: (hover) ? 'block' : 'none'}} className="sub-link-container">
                 {subLinksJSX}
             </ol>

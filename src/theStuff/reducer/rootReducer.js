@@ -36,7 +36,7 @@ const initState = {
             }
         },
         canvasColor: "#eee",
-        darkMode: false,
+        darkMode: true,
     }
 }
 
@@ -177,6 +177,31 @@ const rootReducer = (state = initState, action) => {
                 shortcutKeys: state.customize.shortcutKeys,
                 canvasColor: (state.customize.darkMode) ? "#eee" : "#999",
                 darkMode: !state.customize.darkMode,
+            }
+        }
+    }
+    else if(action.type === "CHANGE_KEY"){
+        var keys = state.customize.shortcutKeys;
+
+        keys[action.keyCat][action.keySelect] = action.newKey;
+
+        return{
+            info: state.info,
+            customize: {
+                shortcutKeys: keys,
+                canvasColor: state.customize.canvasColor,
+                darkMode: state.customize.darkMode
+            }
+        }
+    }
+    else if(action.type === "CHANGE_CANVAS_COLOR"){
+        let newCanvasColor = action.color;
+        return{
+            info: state.info,
+            customize: {
+                shortcutKeys: state.customize.shortcutKeys,
+                canvasColor: newCanvasColor,
+                darkMode: state.customize.darkMode
             }
         }
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import './navbar.sass';
 import DownloadNav from './sublinks/downloadUI';
 import { connect } from 'react-redux';
+import SettingLink from './sublinks/settingLink';
 
 class Navbar extends React.Component {
 
@@ -20,7 +21,9 @@ class Navbar extends React.Component {
                         <DownloadNav
                             colorCss={colorCss}
                         />
-                        <li>Settings</li>
+                        <SettingLink 
+                            colorCss={colorCss}
+                        />
                     </ul>
                     <h1 style={{color: colorCss[3]}}>Owen Bean Double Sided Knitting Pattern Generator</h1>
                 </nav>
