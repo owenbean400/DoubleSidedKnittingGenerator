@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/doubleSidedKnittingGenerator/static/css/main.0299dbd2.chunk.css",
-    "main.js": "/doubleSidedKnittingGenerator/static/js/main.f880e4ff.chunk.js",
-    "main.js.map": "/doubleSidedKnittingGenerator/static/js/main.f880e4ff.chunk.js.map",
-    "runtime-main.js": "/doubleSidedKnittingGenerator/static/js/runtime-main.ff2f640c.js",
-    "runtime-main.js.map": "/doubleSidedKnittingGenerator/static/js/runtime-main.ff2f640c.js.map",
-    "static/js/2.893a4f13.chunk.js": "/doubleSidedKnittingGenerator/static/js/2.893a4f13.chunk.js",
-    "static/js/2.893a4f13.chunk.js.map": "/doubleSidedKnittingGenerator/static/js/2.893a4f13.chunk.js.map",
-    "static/js/3.306a6c76.chunk.js": "/doubleSidedKnittingGenerator/static/js/3.306a6c76.chunk.js",
-    "static/js/3.306a6c76.chunk.js.map": "/doubleSidedKnittingGenerator/static/js/3.306a6c76.chunk.js.map",
+    "main.js": "/doubleSidedKnittingGenerator/static/js/main.a3f6a03c.chunk.js",
+    "main.js.map": "/doubleSidedKnittingGenerator/static/js/main.a3f6a03c.chunk.js.map",
+    "runtime-main.js": "/doubleSidedKnittingGenerator/static/js/runtime-main.54b73bca.js",
+    "runtime-main.js.map": "/doubleSidedKnittingGenerator/static/js/runtime-main.54b73bca.js.map",
+    "static/js/2.7c38bb78.chunk.js": "/doubleSidedKnittingGenerator/static/js/2.7c38bb78.chunk.js",
+    "static/js/2.7c38bb78.chunk.js.map": "/doubleSidedKnittingGenerator/static/js/2.7c38bb78.chunk.js.map",
+    "static/js/3.1690ff60.chunk.js": "/doubleSidedKnittingGenerator/static/js/3.1690ff60.chunk.js",
+    "static/js/3.1690ff60.chunk.js.map": "/doubleSidedKnittingGenerator/static/js/3.1690ff60.chunk.js.map",
     "static/js/4.14f5ca29.chunk.js": "/doubleSidedKnittingGenerator/static/js/4.14f5ca29.chunk.js",
     "static/js/4.14f5ca29.chunk.js.map": "/doubleSidedKnittingGenerator/static/js/4.14f5ca29.chunk.js.map",
     "static/js/5.fc8d3aa1.chunk.js": "/doubleSidedKnittingGenerator/static/js/5.fc8d3aa1.chunk.js",
@@ -17,15 +17,15 @@
     "static/js/6.69efd605.chunk.js.map": "/doubleSidedKnittingGenerator/static/js/6.69efd605.chunk.js.map",
     "index.html": "/doubleSidedKnittingGenerator/index.html",
     "static/css/main.0299dbd2.chunk.css.map": "/doubleSidedKnittingGenerator/static/css/main.0299dbd2.chunk.css.map",
-    "static/js/2.893a4f13.chunk.js.LICENSE.txt": "/doubleSidedKnittingGenerator/static/js/2.893a4f13.chunk.js.LICENSE.txt",
-    "static/js/3.306a6c76.chunk.js.LICENSE.txt": "/doubleSidedKnittingGenerator/static/js/3.306a6c76.chunk.js.LICENSE.txt",
+    "static/js/2.7c38bb78.chunk.js.LICENSE.txt": "/doubleSidedKnittingGenerator/static/js/2.7c38bb78.chunk.js.LICENSE.txt",
+    "static/js/3.1690ff60.chunk.js.LICENSE.txt": "/doubleSidedKnittingGenerator/static/js/3.1690ff60.chunk.js.LICENSE.txt",
     "static/js/4.14f5ca29.chunk.js.LICENSE.txt": "/doubleSidedKnittingGenerator/static/js/4.14f5ca29.chunk.js.LICENSE.txt",
     "static/js/5.fc8d3aa1.chunk.js.LICENSE.txt": "/doubleSidedKnittingGenerator/static/js/5.fc8d3aa1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff2f640c.js",
-    "static/js/3.306a6c76.chunk.js",
+    "static/js/runtime-main.54b73bca.js",
+    "static/js/3.1690ff60.chunk.js",
     "static/css/main.0299dbd2.chunk.css",
-    "static/js/main.f880e4ff.chunk.js"
+    "static/js/main.a3f6a03c.chunk.js"
   ]
 }
