@@ -45,6 +45,13 @@ export default function KeyStroke(){
         if(event.key === keyBoardShortcuts.switchDarkmode.key){
             dispatch({type: "SWITCH_DARKMODE"});
         }
+        if(event.key === keyBoardShortcuts.speedDraw.key){
+            dispatch({type: "SPEED_DRAW_MODE"});
+        }
+        if(event.key === keyBoardShortcuts.invertGrid.key){
+            dispatch({type: "INVERT_GRID"})
+        }
+
     }
 
     return(

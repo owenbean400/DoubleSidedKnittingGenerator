@@ -33,18 +33,19 @@ Can be customized in the settings on the top of nav bar
 | Control + Arrow Right | increase square columns count by one  |
 | Control + Arrow Left  | decrease square columns count by one  |
 | d                     | switch between darkmode and lightmode |
+| 1                     | toggle speed drawing mode             |
+| i                     | switch grid colors                    |
 
 ### Things that being worked on
 
 - [x] Change Background Color
 - [] Bundle files in a zip file
-- [] Add Speed Drawing, adds more than just clicking each square
+- [x] Add Speed Drawing, adds more than just clicking each square
 - [] Add Realistic Photograph of Knit Design
 - [] Make Mobile Friendly
 - [x] Add more GUI customization
 
 ### Update Notes
 
-- Added setting screen
-- Added customizable short cut keys in settings
-- Added customizable canvas color in settings
+- Add toggle Speed drawing with a button
+- Add invert grid button

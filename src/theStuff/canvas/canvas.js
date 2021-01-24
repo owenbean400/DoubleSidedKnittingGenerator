@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import ScrollArea from 'react-scrollbar';
 import './canvas.sass';
+import Square from './square';
 
 class Canvas extends React.Component{
     render(){
@@ -40,8 +41,13 @@ class Canvas extends React.Component{
             var gridRow = [];
             for(let j = 0; j < Object.values(GRID)[i].length; j++){
                 gridRow.push(
-                    <div key={"Column: " + j} id={"Row: " + i + " Column: " + j} style={{...STYLE.box, backgroundColor: this.props.color[Object.values(GRID)[i][j]]}} onClick={(key) => this.props.changeColorSquare(key.target.id)}>
-                    </div>
+                    <Square 
+                        row={i}
+                        column={j}
+                        changeColorAction={(gridInfo) => this.props.changeColorSquare(gridInfo)}
+                        size={this.props.size}
+                        color={this.props.color[Object.values(GRID)[i][j]]}
+                    />
                 )
             }
             gridDisplay.push(
@@ -85,3 +91,11 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Canvas)
+
+/*
+
+
+                    <div key={"Column: " + j} id={"Row: " + i + " Column: " + j} style={{...STYLE.box, backgroundColor: this.props.color[Object.values(GRID)[i][j]]}} onClick={(key) => this.props.changeColorSquare(key.target.id)}>
+                    </div>
+
+*/

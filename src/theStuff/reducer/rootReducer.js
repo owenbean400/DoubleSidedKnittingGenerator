@@ -33,11 +33,18 @@ const initState = {
             },
             switchDarkmode: {
                 key: "d",
+            },
+            speedDraw: {
+                key: "1",
+            },
+            invertGrid: {
+                key: "i"
             }
         },
         canvasColor: "#eee",
         darkMode: true,
-    }
+    },
+    speedDrawing: false,
 }
 
 const rootReducer = (state = initState, action) => {
@@ -49,7 +56,8 @@ const rootReducer = (state = initState, action) => {
                 size: state.info.size,
                 color: newColor
             },
-            customize: state.customize
+            customize: state.customize,
+            speedDrawing: state.speedDrawing
         }
     }
     else if(action.type === "CHANGE_SIZE") {
@@ -69,7 +77,8 @@ const rootReducer = (state = initState, action) => {
                 size: newSize,
                 color: state.info.color
             },
-            customize: state.customize
+            customize: state.customize,
+            speedDrawing: state.speedDrawing
         }
     }
     else if(action.type === "CHANGE_COLOR_SQUARE"){
@@ -84,7 +93,8 @@ const rootReducer = (state = initState, action) => {
                 size: state.info.size,
                 color: state.info.color
             },
-            customize: state.customize
+            customize: state.customize,
+            speedDrawing: state.speedDrawing
         }
     }
     else if(action.type === "CHANGE_GRID"){
@@ -148,7 +158,8 @@ const rootReducer = (state = initState, action) => {
                 size: state.info.size,
                 color: state.info.color
             },
-            customize: state.customize
+            customize: state.customize,
+            speedDrawing: state.speedDrawing
         }
     }
     else if(action.type === "RANDOM_GRID"){
@@ -167,7 +178,28 @@ const rootReducer = (state = initState, action) => {
                 size: state.info.size,
                 color: state.info.color
             },
-            customize: state.customize
+            customize: state.customize,
+            speedDrawing: state.speedDrawing
+        }
+    }
+    else if(action.type === "INVERT_GRID"){
+        let newGrid = {}
+        for(let row = 0; row < Object.values(state.info.grid.row).length; row++){
+            newGrid[row] = [];
+            for(let column = 0; column < Object.values(state.info.grid.row)[0].length; column++){
+                newGrid[row].push((Object.values(state.info.grid.row)[row][column]) ? 0 : 1);
+            }
+        }
+        return {
+            info: {
+                grid: {
+                    row: newGrid,
+                },
+                size: state.info.size,
+                color: state.info.color
+            },
+            customize: state.customize,
+            speedDrawing: state.speedDrawing
         }
     }
     else if(action.type === "SWITCH_DARKMODE"){
@@ -191,7 +223,8 @@ const rootReducer = (state = initState, action) => {
                 shortcutKeys: keys,
                 canvasColor: state.customize.canvasColor,
                 darkMode: state.customize.darkMode
-            }
+            },
+            speedDrawing: state.speedDrawing
         }
     }
     else if(action.type === "CHANGE_CANVAS_COLOR"){
@@ -202,7 +235,15 @@ const rootReducer = (state = initState, action) => {
                 shortcutKeys: state.customize.shortcutKeys,
                 canvasColor: newCanvasColor,
                 darkMode: state.customize.darkMode
-            }
+            },
+            speedDrawing: state.speedDrawing
+        }
+    }
+    else if(action.type === "SPEED_DRAW_MODE"){
+        return{
+            info: state.info,
+            customize: state.customize,
+            speedDrawing: !state.speedDrawing
         }
     }
     return state;
